@@ -1,0 +1,159 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  transition: all 200ms;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+.nasa-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, black, rgba(255, 255, 255, 0));
+  z-index: 2;
+  padding: 1rem;
+}
+
+footer h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+footer p,
+footer i {
+  font-size: 1.2rem;
+}
+
+.footer-description-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sidebar {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+
+.sidebar .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.sidebar-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #242424;
+  padding: 1rem 2rem;
+  width: 80vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: start;
+  box-shadow: 0px 0px 50px black;
+  overflow-y: auto;
+}
+
+.sidebar-content h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar-content h5 {
+  font-size: 1.2rem;
+  font-weight: lighter;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-content i {
+  font-size: 2rem;
+}
+
+.loading-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: #242424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-container i {
+  font-size: 3rem;
+  color: rgb(160, 160, 160);
+  animation: rotate 1s infinite;
+}
+
+.refresh {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
+
+.refresh {
+  font-size: 2rem;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@media screen and (min-width: 678px) {
+  .sidebar-content {
+    width: 400px;
+  }
+}
